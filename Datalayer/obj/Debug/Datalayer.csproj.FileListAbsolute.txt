@@ -1,0 +1,13 @@
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\bin\Debug\Datalayer.dll.config
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\bin\Debug\Datalayer.dll
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\bin\Debug\Datalayer.pdb
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\bin\Debug\EntityFramework.dll
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\bin\Debug\EntityFramework.xml
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\obj\Debug\Datalayer.Migrations.Initial_Database.resources
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\obj\Debug\Datalayer.csproj.GenerateResource.cache
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\obj\Debug\Datalayer.csproj.CoreCompileInputs.cache
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\obj\Debug\Datalayer.csproj.CopyComplete
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\obj\Debug\Datalayer.dll
+D:\MVC cource\MyFirsyProjectWebApp\Datalayer\obj\Debug\Datalayer.pdb
