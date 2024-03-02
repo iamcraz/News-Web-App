@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Datalayer.PageGroup>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-success"id="btnNewGroup">New group</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupTitle)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroupTitle)
+            </td>
+            <td>
+                <a class="btn btn-warning btn-sm" onclick="editgroup(@item.GroupID)">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a> |
+                <a class="btn btn-danger btn-sm" onclick="deletegroup(@item.GroupID)">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </a> |
+                <a class="btn btn-info btn-sm"onclick="infogroup(@item.GroupID)">
+                    <i class="glyphicon glyphicon-info-sign"></i>
+                </a> 
+            </td>
+        </tr>
+    }
+
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="ExampleModalBody">
+                ...
+            </div>
+            
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script src="~/Scripts/modal.js"></script>
+    <script>
+        $("#btnNewGroup").click(function () {
+            $.get("/Admin/PageGroups/Create", function (result) {
+                $("#exampleModal").modal();
+                $("#exampleModalLabel").html("New Group");
+                $("#ExampleModalBody").html(result);
+
+            });
+        });
+
+        function editgroup(id) {
+            $.get("/Admin/PageGroups/Edit/" + id, function (result) {
+                $("#exampleModal").modal();
+                $("#exampleModalLabel").html("Edit Group");
+                $("#ExampleModalBody").html(result);
+            });
+        }
+        function deletegroup(id) {
+            $.get("/Admin/PageGroups/Delete/" + id, function (result) {
+                $("#exampleModal").modal();
+                $("#exampleModalLabel").html("Edit Group");
+                $("#ExampleModalBody").html(result);
+            });
+        }
+        function infogroup(id) {
+            $.get("/Admin/PageGroups/Details/" + id, function (result) {
+                $("#exampleModal").modal();
+                $("#exampleModalLabel").html("Detail Group");
+                $("#ExampleModalBody").html(result);
+            });
+        }
+
+    </script> 
+    
+}
