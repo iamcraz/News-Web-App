@@ -1,0 +1,24 @@
+﻿@model Datalayer.Page
+<section>
+<h6> شما هم دیدگاه خود را ارسال کنید </h6>
+<form class="comment-form" action="" method="post">
+    <div>
+        <input placeholder=" نام و نام خانوادگی" type="text" id="name">
+        <input placeholder=" ایمیل خود را وارد نمایید " type="email" id="email">
+
+    </div>
+    <textarea placeholder=" متن دیدگاه" id="comment"> </textarea>
+    <input value="ثبت دیدگاه ارزشمند شما " type="submit">
+</form>
+</section>
+<script>
+const { type } = require("jquery");
+
+    function addcomment() {
+        $.ajax({
+            url: "/News/Add_Comment/" +@Model.PageID,
+            type: "get",
+            data: { name: $("name").val(), email: $("email").val(), comment: $("comment").val() }//تا اینجا دقیقه 18:40 ناقص مونده کامل کن //
+        })
+    }
+</script>

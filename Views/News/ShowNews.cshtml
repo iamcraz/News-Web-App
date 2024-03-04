@@ -1,0 +1,27 @@
+﻿@model Datalayer.Page
+@{
+    ViewBag.Title = "ShowNews";
+}
+
+
+
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">خانه </a></li>
+    <li class="breadcrumb-item"><a href="#">دسته بندی  </a></li>
+    <li class="breadcrumb-item active">@Model.PageGroup.GroupTitle </li>
+</ul>
+
+<section class="single-news border-radius">
+    <header><h2> @Model.Title </h2> <span> <i class="fa fa-calendar"></i>  انتشار : @Model.CreateDate.TOshamsi()</span></header>
+    <article>
+        <img src="~/PageImages/@Model.ImageName" style="max-width:100%"/>
+        <p>
+            @Model.ShortDiscription
+        </p>
+        <p>
+            @Model.Text
+        </p>
+    </article>
+</section>
+@Html.Action("ShowComments","News")
+@Html.Action("Show_AddComment","News")

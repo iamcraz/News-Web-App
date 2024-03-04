@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Datalayer.PageComment>
+<section class="comment-layer">
+    <header> <i class="fa fa-comments"></i><h5> دیدگاه کاربران </h5></header>
+    @foreach (var item in Model)
+    {
+        <ul>
+            <!-- start each comment -->
+            <li>
+                <img src="~/Content/img/thumb.png">
+                <div>
+                    <span>@item.Name  </span>
+                    <span> @item.CreateDate </span>
+                </div>
+                <p>@item.Comment</p>
+            </li>
+            <!-- end each comment -->
+        </ul>
+    }
+
+
+
